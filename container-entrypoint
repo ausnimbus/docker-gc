@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Run as a long running daemonset until daemonsets cronjobs
+# https://github.com/kubernetes/kubernetes/issues/36601
+# or the fix for docker metadata gc is implemented
+while true; do
+  docker-gc
+  # Sleep for 1 day
+  sleep 1440
+done

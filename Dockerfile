@@ -1,7 +1,8 @@
 FROM docker
 
-COPY ./docker-gc /docker-gc
+COPY container-entrypoint /usr/bin/
+COPY docker-gc /usr/bin/
 
 VOLUME /var/lib/docker-gc
 
-CMD ["/docker-gc"]
+ENTRYPOINT ["container-entrypoint"]

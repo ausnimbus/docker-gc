@@ -1,6 +1,6 @@
 # docker-gc
 
-[![Docker Repository on Quay](https://quay.io/repository/ausnimbus/docker-gc/status "Docker Repository on Quay")](https://quay.io/repository/ausnimbus/docker-gc)
+[![Docker Repository on Quay](https://quay.io/repository/ausnimbus/gc/status "Docker Repository on Quay")](https://quay.io/repository/ausnimbus/gc)
 
 * [Building](#building)
 * [Installing](#installing)

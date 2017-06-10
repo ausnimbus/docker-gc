@@ -5,7 +5,6 @@ RUN apk add --no-cache bash && \
 
 COPY container-entrypoint /usr/bin/
 COPY docker-gc /usr/bin/
-
-VOLUME /var/lib/docker-gc
+COPY docker-gc-exclude /etc/
 
 ENTRYPOINT ["container-entrypoint"]

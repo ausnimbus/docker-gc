@@ -5,6 +5,7 @@
 # or the fix for docker metadata gc is implemented
 while true; do
   docker-gc
-  # Sleep for 1 day
+
+  echo "Sleeping for 24 hours"
   sleep 1440
 done

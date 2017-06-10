@@ -1,5 +1,7 @@
 # docker-gc
 
+[![Docker Repository on Quay](https://quay.io/repository/ausnimbus/docker-gc/status "Docker Repository on Quay")](https://quay.io/repository/ausnimbus/docker-gc)
+
 * [Building](#building)
 * [Installing](#installing)
 * [Usage](#usage)
@@ -9,7 +11,7 @@
     * [Build the Docker Image](#build-the-docker-image)
     * [Running as a Docker Container](#running-as-a-docker-container)
 
-A simple Docker container and image garbage collection script.
+A simple Docker container and image garbage collection script used within [AusNimbus](https://www.ausnimbus.com.au/)
 
 * Containers that exited more than an hour ago are removed.
 * Images that don't belong to any remaining container after that are removed.
@@ -44,7 +46,7 @@ $ dpkg -i ../docker-gc_0.0.4_all.deb
 ```
 
 This installs the `docker-gc` script into `/usr/sbin`. If you want it to
-run as a cron job, you can configure it now by creating a root-owned 
+run as a cron job, you can configure it now by creating a root-owned
 executable file `/etc/cron.hourly/docker-gc` with the following contents:
 
 ```
@@ -88,11 +90,11 @@ redis:.*
 
 ### Excluding Containers From Garbage Collection
 
-There can also be containers (for example data only containers) which 
-you would like to exclude from garbage collection. To do so, create 
-`/etc/docker-gc-exclude-containers`, or if you want the file to be 
-read from elsewhere, set the `EXCLUDE_CONTAINERS_FROM_GC` environment 
-variable to its location. This file should container name patterns (in 
+There can also be containers (for example data only containers) which
+you would like to exclude from garbage collection. To do so, create
+`/etc/docker-gc-exclude-containers`, or if you want the file to be
+read from elsewhere, set the `EXCLUDE_CONTAINERS_FROM_GC` environment
+variable to its location. This file should container name patterns (in
 the `grep` sense), one per line, such as `mariadb-data`.
 
 An example container excludes file might contain:
